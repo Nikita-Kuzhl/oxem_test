@@ -1,0 +1,27 @@
+// Neksts
+
+@font-face {
+  font-family: 'Nekst';
+  src: url('../../fonts/Nekst-Black/Nekst-Black.eot');
+  src: local('Nekst Black'), local('Nekst-Black'),
+    url('../../fonts/Nekst-Black/Nekst-Black.eot?#iefix') format('embedded-opentype'),
+    url('../../fonts/Nekst-Black/Nekst-Black.woff2') format('woff2'),
+    url('../../fonts/Nekst-Black/Nekst-Black.woff') format('woff'),
+    url('../../fonts/Nekst-Black/Nekst-Black.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+}
+
+//Gilroy Regular
+
+@font-face {
+  font-family: 'Gilroy';
+  src: url('../../fonts/Gilroy-Regular/Gilroy-Regular.eot');
+  src: local('Gilroy Regular'), local('Gilroy-Regular'),
+    url('../../fonts/Gilroy-Regular/Gilroy-Regular.eot?#iefix') format('embedded-opentype'),
+    url('../../fonts/Gilroy-Regular/Gilroy-Regular.woff2') format('woff2'),
+    url('../../fonts/Gilroy-Regular/Gilroy-Regular.woff') format('woff'),
+    url('../../fonts/Gilroy-Regular/Gilroy-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}

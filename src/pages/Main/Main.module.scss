@@ -1,0 +1,122 @@
+@import '../../styles/index.scss';
+.container {
+  padding: 44px 5% 60px;
+}
+.title {
+  font-weight: 900;
+  font-size: 34px;
+  line-height: 90%;
+  color: $black;
+  line-height: 31px;
+}
+.input__list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 25px;
+  margin-top: 32px;
+}
+.result__container {
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 32px;
+}
+.result__list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 29px;
+}
+.result__title {
+  font-family: 'Gilroy';
+  font-style: normal;
+  font-weight: 400;
+  color: $gray_1;
+  font-size: 14px;
+  line-height: 19px;
+}
+.result__text {
+  color: $gray_1;
+  font-size: 22px;
+  line-height: 20px;
+}
+.button {
+}
+
+@include tablet {
+  .container {
+    padding: 64px 4.7% 60px;
+  }
+  .title {
+    font-weight: 900;
+    font-size: 54px;
+    line-height: 49px;
+  }
+  .input__list {
+    row-gap: 39px;
+    margin-top: 44px;
+  }
+  .result__container {
+    row-gap: 44px;
+    margin-top: 44px;
+  }
+  .result__list {
+    flex-direction: row;
+    gap: 85px;
+  }
+  .result__title {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .result__text {
+    font-size: 54px;
+    line-height: 49px;
+    margin-top: 8px;
+    span {
+      position: relative;
+      bottom: 5px;
+    }
+  }
+}
+@include big-tablet {
+  .container {
+    padding-top: 100px;
+  }
+  .result__list {
+    gap: 201px;
+  }
+}
+@include desktop {
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 48px;
+    width: 1440px;
+    height: 100vh;
+    margin: auto;
+    padding-bottom: 0;
+  }
+  .title {
+    max-width: 700px;
+  }
+  .input__list {
+    flex-direction: row;
+    gap: 32px;
+    row-gap: 0;
+  }
+  .result__container {
+    margin-top: 51px;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .result__list {
+    gap: 180px;
+  }
+  .result__title {
+    color: $dark-gray;
+  }
+  .result__title {
+    color: $dark-gray;
+    min-width: 279px;
+  }
+}

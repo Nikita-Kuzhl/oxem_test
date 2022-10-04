@@ -1,0 +1,52 @@
+@import '/src/styles/index.scss';
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 40px;
+  border: none;
+  color: white;
+  transition: 0.15s;
+  padding: 12px 24px;
+  background-color: $orange;
+  cursor: pointer;
+}
+
+@include phone {
+  .container {
+    width: 280px;
+    height: 60px;
+    font-size: 22px;
+    line-height: 20px;
+  }
+}
+
+@include tablet {
+  .container {
+    width: 345px;
+    height: 68px;
+    font-size: 30px;
+    line-height: 36px;
+  }
+}
+@include desktop {
+  .container {
+    width: 426px;
+    height: 68px;
+  }
+}
+
+.passive:hover {
+  background-color: $black;
+}
+.passive:active {
+  background-color: $dark-gray;
+}
+.passive {
+  background-color: $orange;
+}
+.disabled {
+  background-color: $light-orange;
+  cursor: auto;
+}

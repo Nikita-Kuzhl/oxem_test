@@ -1,0 +1,418 @@
+//Fonts
+
+// Neksts
+
+@font-face {
+  font-family: 'Nekst';
+  src: url('../../fonts/Nekst-Black/Nekst-Black.eot');
+  src: local('Nekst Black'), local('Nekst-Black'),
+    url('../../fonts/Nekst-Black/Nekst-Black.eot?#iefix') format('embedded-opentype'),
+    url('../../fonts/Nekst-Black/Nekst-Black.woff2') format('woff2'),
+    url('../../fonts/Nekst-Black/Nekst-Black.woff') format('woff'),
+    url('../../fonts/Nekst-Black/Nekst-Black.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+}
+
+//Gilroy Regular
+
+@font-face {
+  font-family: 'Gilroy';
+  src: url('../../fonts/Gilroy-Regular/Gilroy-Regular.eot');
+  src: local('Gilroy Regular'), local('Gilroy-Regular'),
+    url('../../fonts/Gilroy-Regular/Gilroy-Regular.eot?#iefix') format('embedded-opentype'),
+    url('../../fonts/Gilroy-Regular/Gilroy-Regular.woff2') format('woff2'),
+    url('../../fonts/Gilroy-Regular/Gilroy-Regular.woff') format('woff'),
+    url('../../fonts/Gilroy-Regular/Gilroy-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+// Global
+
+@import './variables';
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Nekst;
+  font-weight: 900;
+}
+
+input[type='number']::-webkit-outer-spin-button,
+input[type='number']::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+input[type='number'],
+input[type='number']:hover,
+input[type='number']:focus {
+  appearance: none;
+  -moz-appearance: textfield;
+}
+
+.slider__track {
+  background: $gray;
+  height: 1px;
+  border-top-left-radius: 16px;
+}
+.slider__track-0 {
+  margin-top: -1px;
+  background: $orange;
+  height: 2px;
+}
+
+// Mixins
+
+@import './variables';
+
+//Size device
+
+@mixin phone() {
+  @media screen and (min-width: $phone-min-width) {
+    @content;
+  }
+}
+
+@mixin tablet() {
+  @media screen and (min-width: $tablet-min-width) {
+    @content;
+  }
+}
+
+@mixin big-tablet() {
+  @media screen and (min-width: $big-tablet-min-width) {
+    @content;
+  }
+}
+
+@mixin desktop() {
+  @media screen and (min-width: $desktop-tablet-min-width) {
+    @content;
+  }
+}
+
+// Variables
+
+// Colors
+
+$orange: #ff9514;
+$dark-gray: #575757;
+$light-gray: #f3f3f4;
+$gray: #e1e1e1;
+$gray_1: #333333;
+$black: #111111;
+$light-orange: rgba(255, 166, 57, 0.4);
+$graphit: #333e48;
+
+//  Device size
+
+$phone-min-width: 320px;
+$tablet-min-width: 768px;
+$big-tablet-min-width: 1024px;
+$desktop-tablet-min-width: 1440px;
+
+// Pages
+
+// Main module
+
+@import '../../styles/index.scss';
+.container {
+  padding: 44px 5% 60px;
+}
+.title {
+  font-weight: 900;
+  font-size: 34px;
+  line-height: 90%;
+  color: $black;
+  line-height: 31px;
+}
+.input__list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 25px;
+  margin-top: 32px;
+}
+.result__container {
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 32px;
+}
+.result__list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 29px;
+}
+.result__title {
+  font-family: 'Gilroy';
+  font-style: normal;
+  font-weight: 400;
+  color: $gray_1;
+  font-size: 14px;
+  line-height: 19px;
+}
+.result__text {
+  color: $gray_1;
+  font-size: 22px;
+  line-height: 20px;
+}
+
+@include tablet {
+  .container {
+    padding: 64px 4.7% 60px;
+  }
+  .title {
+    font-weight: 900;
+    font-size: 54px;
+    line-height: 49px;
+  }
+  .input__list {
+    row-gap: 39px;
+    margin-top: 44px;
+  }
+  .result__container {
+    row-gap: 44px;
+    margin-top: 44px;
+  }
+  .result__list {
+    flex-direction: row;
+    gap: 85px;
+  }
+  .result__title {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .result__text {
+    font-size: 54px;
+    line-height: 49px;
+    margin-top: 8px;
+    span {
+      position: relative;
+      bottom: 5px;
+    }
+  }
+}
+@include big-tablet {
+  .container {
+    padding-top: 100px;
+  }
+  .result__list {
+    gap: 201px;
+  }
+}
+@include desktop {
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 48px;
+    width: 1440px;
+    height: 100vh;
+    margin: auto;
+    padding-bottom: 0;
+  }
+  .title {
+    max-width: 700px;
+  }
+  .input__list {
+    flex-direction: row;
+    gap: 32px;
+    row-gap: 0;
+  }
+  .result__container {
+    margin-top: 51px;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .result__list {
+    gap: 180px;
+  }
+  .result__title {
+    color: $dark-gray;
+  }
+  .result__title {
+    color: $dark-gray;
+    min-width: 279px;
+  }
+}
+
+// Component
+
+// Button module
+
+@import '/src/styles/index.scss';
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 40px;
+  border: none;
+  color: white;
+  transition: 0.15s;
+  padding: 12px 24px;
+  background-color: $orange;
+  cursor: pointer;
+}
+
+@include phone {
+  .container {
+    width: 280px;
+    height: 60px;
+    font-size: 22px;
+    line-height: 20px;
+  }
+}
+
+@include tablet {
+  .container {
+    width: 345px;
+    height: 68px;
+    font-size: 30px;
+    line-height: 36px;
+  }
+}
+@include desktop {
+  .container {
+    width: 426px;
+    height: 68px;
+  }
+}
+
+.passive:hover {
+  background-color: $black;
+}
+.passive:active {
+  background-color: $dark-gray;
+}
+.passive {
+  background-color: $orange;
+}
+.disabled {
+  background-color: $light-orange;
+  cursor: auto;
+}
+
+// Input module
+
+@import '../../styles/index.scss';
+
+.container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  transition: 0.3s;
+  &:hover .slider__thumb {
+    width: 24px;
+    height: 24px;
+    margin-top: -12px;
+  }
+}
+.disabled {
+  opacity: 0.4;
+}
+.tag {
+  position: absolute;
+  right: 0;
+  top: 55%;
+  font-weight: 900;
+  font-size: 22px;
+  line-height: 20px;
+  text-align: right;
+  padding-right: 24px;
+  color: $graphit;
+}
+.tag__border {
+  color: $graphit;
+  position: absolute;
+  right: 0;
+  top: 38%;
+  padding: 14px;
+  background: rgba(224, 224, 224, 0.4);
+  font-weight: 900;
+
+  font-size: 22px;
+  line-height: 20px;
+  border-radius: 16px;
+  margin-right: 7px;
+}
+
+.title {
+  font-family: 'Gilroy';
+  color: $dark-gray;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19px;
+  margin-bottom: 8px;
+}
+
+.field {
+  outline: none;
+  border: none;
+  border: 2px solid $light-gray;
+  height: 60px;
+  background: #f3f3f4;
+  border-radius: 16px;
+  font-weight: 900;
+  font-size: 22px;
+  line-height: 20px;
+  color: $graphit;
+  padding: 20px;
+  &:focus {
+    background: none;
+  }
+}
+
+.slider {
+  margin: 0 24px;
+  cursor: pointer;
+  margin-top: -1px;
+  &:hover .slider__track-0 {
+    height: 24px;
+    width: 24px;
+  }
+}
+.slider__thumb {
+  margin-top: -10px;
+  cursor: grab;
+  width: 20px;
+  height: 20px;
+  background: $orange;
+  border-radius: 100%;
+  outline: none;
+  border: none;
+}
+.slider__thumb:active {
+  cursor: grabbing;
+}
+
+@include tablet {
+  .title {
+    margin-bottom: 24px;
+    font-size: 16px;
+    line-height: 20px;
+  }
+  .tag {
+    top: 55%;
+    color: $dark-gray;
+    font-size: 30px;
+    line-height: 36px;
+  }
+  .tag__border {
+    top: 47%;
+    padding: 15px 17px;
+    color: $dark-gray;
+    font-size: 20px;
+    line-height: 24px;
+  }
+  .field {
+    height: 68px;
+    padding: 0 24px;
+    font-size: 30px;
+    line-height: 36px;
+    color: $dark-gray;
+  }
+}
