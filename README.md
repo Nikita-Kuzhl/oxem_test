@@ -4,5 +4,5 @@
 
 ## Запуск проекта
 
-### `yarn`
-### `yarn start`
+``` yarn 
+yarn start ```
