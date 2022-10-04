@@ -4,5 +4,7 @@
 
 ## Запуск проекта
 
-``` yarn 
-yarn start ```
+```bash
+yarn 
+yarn start 
+```
